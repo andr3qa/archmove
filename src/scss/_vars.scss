@@ -1,0 +1,11 @@
+:root {
+  --fontFamily: "SFUIDisplay", sans-serif;
+  --secondFamily: "New York Extra Large", sans-serif;
+  --contentWidth: 1110px;
+  --siteWidthMax: 1440px;
+  --siteWidthMin: 320px;
+  --containerOffset: 15px;
+  --containerWidth: calc(var(--contentWidth) + var(--containerOffset) * 2);
+  --mainColor: #fd665e;
+  --fontColor: #000;
+}

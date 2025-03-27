@@ -1,0 +1,82 @@
+@use "mixins"as *;
+
+.header {
+  padding: 30px 0;
+
+  &__container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr 250px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end;
+    width: 250px;
+  }
+}
+
+.nav {
+  &__item {
+    display: inline-block;
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #585858;
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--mainColor);
+    }
+
+    &:active {
+      color: #ffaeaa;
+    }
+  }
+}
+
+.search {
+  width: 16px;
+  height: 16px;
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+    fill: #585858;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    .search__svg {
+      fill: var(--mainColor);
+    }
+  }
+
+  &:active {
+    .search__svg {
+      fill: #ffaeaa;
+    }
+  }
+}
+
+.sign-in {
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #585858;
+
+  &:hover {
+    color: var(--mainColor);
+  }
+
+  &:active {
+    color: #ffaeaa;
+  }
+}
