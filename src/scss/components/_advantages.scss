@@ -1,0 +1,112 @@
+@use "mixins"as *;
+
+.advantages {
+  padding-bottom: 50px;
+
+  &__content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    gap: 200px;
+
+    @include media(1024) {
+      align-items: start;
+      gap: 100px;
+    }
+
+    @include media(700) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__txt {
+    justify-self: end;
+    max-width: 380px;
+
+    @include media(700) {
+      justify-self: start;
+      margin-left: 77px;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    width: 535px;
+    height: 610px;
+    background: center / cover no-repeat url("./../img/advantages__img.webp");
+
+    @include media(1024) {
+      width: 335px;
+      height: 410px;
+    }
+
+    @include media(700) {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 50px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -90px;
+      top: 0;
+      width: 44px;
+      height: 54px;
+      background: center / cover no-repeat;
+
+      @include media(1024) {
+        left: -70px;
+      }
+    }
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url("./../img/advantages__icon_1.svg");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background-image: url("./../img/advantages__icon_2.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url("./../img/advantages__icon_3.svg");
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+  }
+
+  &__item-par {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+  }
+
+  &__btn {
+    display: block;
+    margin: 72px auto 0;
+
+    // @include media(700) {
+    //   margin: 72px 0 0;
+    // }
+  }
+}
