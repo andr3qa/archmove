@@ -1,3 +1,71 @@
 @use "mixins"as *;
 
-.hero {}
+.hero {
+  padding-bottom: 300px;
+
+  @include media(700) {
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    position: relative;
+
+    @include media(700) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-top: 50px;
+    font-family: var(--secondFamily);
+    font-weight: 700;
+    font-size: 112px;
+    line-height: 110px;
+    letter-spacing: -0.04em;
+    color: var(--fontColor);
+
+    @include media(700) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+
+    &_span {
+      color: var(--mainColor);
+    }
+  }
+
+  &__txt {
+    margin-top: 70px;
+    max-width: 290px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    @include media(700) {
+      margin: 30px auto 0;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+
+    @include media(700) {
+      margin-top: 30px;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    right: 0;
+    bottom: -270px;
+    width: 67%;
+
+    @include media(700) {
+      position: static;
+      display: block;
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+}

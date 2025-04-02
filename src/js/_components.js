@@ -1,1 +1,1 @@
-// import "./components/burger.js";
+import "./components/gallary-swiper.js";
