@@ -1,0 +1,17 @@
+@use "mixins"as *;
+
+.partners {
+  padding: 50px 0 100px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 40px;
+
+    @include media(700) {
+      flex-direction: column;
+    }
+  }
+}
