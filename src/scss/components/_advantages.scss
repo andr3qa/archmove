@@ -27,8 +27,13 @@
 
     @include media(700) {
       justify-self: start;
-      margin-left: 77px;
       max-width: 100%;
+    }
+  }
+
+  &__list {
+    @include media(700) {
+      padding-left: 77px;
     }
   }
 
@@ -104,9 +109,5 @@
   &__btn {
     display: block;
     margin: 72px auto 0;
-
-    // @include media(700) {
-    //   margin: 72px 0 0;
-    // }
   }
 }

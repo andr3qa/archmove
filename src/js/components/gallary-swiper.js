@@ -8,8 +8,8 @@ const gallarySwiper = new Swiper('.gallary__swiper', {
   slidesPerView: 1,
   spaceBetween: 40,
   navigation: {
-    nextEl: ".gallary-swiper-button_next",
-    prevEl: ".gallary-swiper-button_prev",
+    nextEl: ".gallary__swiper-button_next",
+    prevEl: ".gallary__swiper-button_prev",
   },
   breakpoints: {
     500: {

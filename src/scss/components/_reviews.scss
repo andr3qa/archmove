@@ -1,0 +1,90 @@
+@use "mixins"as *;
+
+.reviews {
+  padding: 60px 0 120px;
+  background: linear-gradient(180deg, #f9f9f9 22.12%, rgba(249, 249, 249, 0) 100%);
+
+  &__container {
+    position: relative;
+  }
+
+  &__swiper {
+    margin-top: 40px;
+
+    @include media(700) {
+      margin-top: 20px;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    right: 0;
+    bottom: -70px;
+    z-index: 1;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 200px;
+  text-align: left;
+
+  @include media(1024) {
+    padding-left: 0;
+  }
+
+  &__par {
+    padding-left: 100px;
+    max-width: 765px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: 0.01em;
+
+    @include media(700) {
+      padding-top: 30px;
+      padding-left: 0;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 200px;
+      top: 0;
+      width: 57px;
+      height: 39px;
+      background: center / cover no-repeat url("./../img/quotation.svg");
+
+      @include media(1024) {
+        left: 0;
+      }
+
+      @include media(700) {
+        top: 4px;
+        z-index: -1;
+        width: 28px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__name {
+    margin-top: 60px;
+    padding-left: 100px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+
+    @include media(700) {
+      padding-left: 0;
+    }
+
+    &_span {
+      font-weight: 700;
+    }
+  }
+}
